@@ -138,16 +138,15 @@ then run and track it end to end.</p>
 </td>
 
 <td width="50%" valign="top">
-<a href="https://izem-apart.vercel.app">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="İzem Apart">
+<a href="https://github.com/barisyesil/arcelik-smart-fridge-vision-poc">
+  <img src="assets/projects/_placeholder.svg" width="100%" alt="Arçelik Smart Fridge — Vision PoC">
 </a>
-<h3>İzem Apart</h3>
-<p>Premium, mobile-first redesign for a student residence — fast pages, clear
-room info and a booking-focused flow.</p>
-<p><code>Next.js 16</code> <code>Tailwind v4</code> <code>TypeScript</code></p>
+<h3>Arçelik Smart Fridge — Vision PoC</h3>
+<p>Photograph what's in the fridge and a vision LLM logs it: serverless AWS
+pipeline that recognizes groceries and estimates freshness per category.</p>
+<p><code>Python</code> <code>AWS</code> <code>Gemini</code> <code>TypeScript</code></p>
 <p>
-  <a href="https://github.com/barisyesil/izem-apart"><b>CODE →</b></a> ·
-  <a href="https://izem-apart.vercel.app"><b>LIVE →</b></a>
+  <a href="https://github.com/barisyesil/arcelik-smart-fridge-vision-poc"><b>CODE →</b></a>
 </p>
 </td>
 
@@ -169,15 +168,15 @@ time, and learns what you like.</p>
 </td>
 
 <td width="50%" valign="top">
-<a href="https://github.com/barisyesil/all_in_one_party_games">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="All-in-One Party Games">
+<a href="https://github.com/barisyesil/invoice-llm-benchmark">
+  <img src="assets/projects/_placeholder.svg" width="100%" alt="Invoice LLM Benchmark">
 </a>
-<h3>All-in-One Party Games</h3>
-<p>A single phone, a room full of people: a Flutter app that packs one-device
-party games into one place.</p>
-<p><code>Flutter</code> <code>Dart</code> <code>Mobile</code></p>
+<h3>Invoice LLM Benchmark</h3>
+<p>Which vision LLM reads Turkish invoices best, and for how much? A
+provider-agnostic lab that scores accuracy, hallucination, latency and cost.</p>
+<p><code>Next.js</code> <code>TypeScript</code> <code>LLM eval</code></p>
 <p>
-  <a href="https://github.com/barisyesil/all_in_one_party_games"><b>CODE →</b></a>
+  <a href="https://github.com/barisyesil/invoice-llm-benchmark"><b>CODE →</b></a>
 </p>
 </td>
 

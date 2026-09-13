@@ -96,7 +96,7 @@ actually sounds like.
 
 <td width="50%" valign="top">
 <a href="https://github.com/barisyesil/reliable-academic-assistant">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="Reliable Academic Assistant">
+  <img src="assets/projects/academicassistant.jpeg" width="100%" alt="Reliable Academic Assistant">
 </a>
 <h3>Reliable Academic Assistant</h3>
 <p>An LLM + RAG assistant built for trust: academic answers grounded in
@@ -109,7 +109,7 @@ retrieved sources instead of hallucinations.</p>
 
 <td width="50%" valign="top">
 <a href="https://devquest-indol.vercel.app">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="Dev Quest — Portfolio RPG">
+  <img src="assets/projects/devquest.jpeg" width="100%" alt="Dev Quest — Portfolio RPG">
 </a>
 <h3>Dev Quest — Portfolio RPG</h3>
 <p>A retro 2D world you can actually walk through — skills and projects hidden
@@ -126,7 +126,7 @@ in the map like loot.</p>
 
 <td width="50%" valign="top">
 <a href="https://github.com/barisyesil/flowforge">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="FlowForge">
+  <img src="assets/projects/flowforge.jpeg" width="100%" alt="FlowForge">
 </a>
 <h3>FlowForge</h3>
 <p>Multi-step wizard forms meet business process management: design a flow once,
@@ -139,7 +139,7 @@ then run and track it end to end.</p>
 
 <td width="50%" valign="top">
 <a href="https://github.com/barisyesil/arcelik-smart-fridge-vision-poc">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="Arçelik Smart Fridge — Vision PoC">
+  <img src="assets/projects/arcelikpoc.jpg" width="100%" alt="Arçelik Smart Fridge — Vision PoC">
 </a>
 <h3>Arçelik Smart Fridge — Vision PoC</h3>
 <p>Photograph what's in the fridge and a vision LLM logs it: serverless AWS
@@ -155,7 +155,7 @@ pipeline that recognizes groceries and estimates freshness per category.</p>
 
 <td width="50%" valign="top">
 <a href="https://smart-restaurant-finder-neon.vercel.app">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="Smart Restaurant Finder">
+  <img src="assets/projects/craveradar.jpeg" width="100%" alt="Smart Restaurant Finder">
 </a>
 <h3>Smart Restaurant Finder</h3>
 <p>Detects where you are, maps the restaurants and cafés around you in real
@@ -169,7 +169,7 @@ time, and learns what you like.</p>
 
 <td width="50%" valign="top">
 <a href="https://github.com/barisyesil/invoice-llm-benchmark">
-  <img src="assets/projects/_placeholder.svg" width="100%" alt="Invoice LLM Benchmark">
+  <img src="assets/projects/llmfis.jpeg" width="100%" alt="Invoice LLM Benchmark">
 </a>
 <h3>Invoice LLM Benchmark</h3>
 <p>Which vision LLM reads Turkish invoices best, and for how much? A
@@ -215,8 +215,8 @@ provider-agnostic lab that scores accuracy, hallucination, latency and cost.</p>
 
 <div align="center">
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=barisyesil&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&hide_border=false&border_radius=0&bg_color=0d0221&title_color=ff2e97&text_color=e8e3ff&icon_color=00e5ff&border_color=3d2a63" alt="GitHub stats for barisyesil">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=barisyesil&layout=compact&langs_count=8&hide_border=false&border_radius=0&bg_color=0d0221&title_color=ff2e97&text_color=e8e3ff&border_color=3d2a63" alt="Most used languages">
+  <img height="170" src="https://github-stats-extended.vercel.app/api?username=barisyesil&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&hide_border=false&border_radius=0&bg_color=0d0221&title_color=ff2e97&text_color=e8e3ff&icon_color=00e5ff&border_color=3d2a63" alt="GitHub stats for barisyesil">
+  <img height="170" src="https://github-stats-extended.vercel.app/api/top-langs/?username=barisyesil&layout=compact&langs_count=8&hide_border=false&border_radius=0&bg_color=0d0221&title_color=ff2e97&text_color=e8e3ff&border_color=3d2a63" alt="Most used languages">
 
   <br><br>
 

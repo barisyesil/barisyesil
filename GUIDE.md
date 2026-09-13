@@ -119,22 +119,26 @@ not sit in the repo.
 
 ## The stat cards (read this one)
 
-The two cards under **GITHUB STATS** come from
-[`github-readme-stats`](https://github.com/anuraghazra/github-readme-stats).
-Its free public instance is shared by millions of READMEs, so it is regularly
-rate-limited and is sometimes **paused entirely** — as it was when this profile
-was built. When that happens both cards show as broken images.
+The two cards under **GITHUB STATS** are powered by
+[`github-stats-extended`](https://github.com/stats-organization/github-stats-extended),
+a maintained fork of the popular `github-readme-stats`. The original project's
+public instance is shared by millions of READMEs and is regularly rate-limited
+or paused entirely — it was down when this profile was first built, which is
+why the README points at the fork's instance
+(`github-stats-extended.vercel.app`) instead. Same query parameters, same
+palette hexes, just a different host.
 
-The fix is to run your own copy. It is free, takes about three minutes, and it
-never rate-limits you:
+If the fork's public instance ever goes down too, run your own copy — it is
+free and takes about three minutes:
 
-1. Fork <https://github.com/anuraghazra/github-readme-stats>.
+1. Fork <https://github.com/anuraghazra/github-readme-stats> (or the extended
+   fork above).
 2. Create a GitHub personal access token with **no scopes at all**
    (Settings > Developer settings > Tokens (classic) > Generate).
 3. Import the fork at <https://vercel.com/new> and add an environment variable
    `PAT_1` set to that token. Deploy.
 4. Vercel gives you a URL like `https://your-stats.vercel.app`. In `README.md`,
-   replace both occurrences of `github-readme-stats.vercel.app` with it.
+   replace both occurrences of `github-stats-extended.vercel.app` with it.
 
 The streak card comes from a different service
 (`streak-stats.demolab.com`) which was healthy at build time and needs nothing.

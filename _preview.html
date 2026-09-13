@@ -1,0 +1,94 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>profile README preview</title>
+<style>
+  :root { color-scheme: dark; }
+  body { background:#0d1117; color:#e6edf3; margin:0;
+         font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .wrap { max-width:1012px; margin:0 auto; padding:32px 16px 120px; }
+  .bar { position:sticky; top:0; background:#161b22; border-bottom:1px solid #30363d;
+         padding:8px 16px; font:12px ui-monospace,monospace; color:#7d8590; z-index:9; }
+  .bar a { color:#58a6ff; margin-right:14px; text-decoration:none; }
+  #md img { max-width:100%; vertical-align:middle; }
+  #md h1,#md h2,#md h3 { border-bottom:1px solid #21262d; padding-bottom:.3em; margin:24px 0 16px; }
+  #md h1 { font-size:2em } #md h2 { font-size:1.5em } #md h3 { font-size:1.25em; border:0 }
+  #md p { margin:0 0 16px }
+  #md hr { height:.25em; background:#30363d; border:0; margin:24px 0 }
+  #md table { border-collapse:collapse; margin:0 0 16px }
+  #md td,#md th { border:1px solid #30363d; padding:6px 13px }
+  #md code { background:#6e768166; padding:.2em .4em; border-radius:6px;
+             font:85% ui-monospace,monospace }
+  #md pre { background:#161b22; padding:16px; border-radius:6px; overflow:auto }
+  #md pre code { background:none; padding:0 }
+  #md blockquote { border-left:.25em solid #30363d; color:#8b949e; padding:0 1em; margin:0 0 16px }
+  #md ul,#md ol { padding-left:2em; margin:0 0 16px }
+  body.light { background:#fff; color:#1f2328 }
+  body.light .bar { background:#f6f8fa; border-color:#d0d7de }
+  body.light #md h1, body.light #md h2 { border-color:#d1d9e0 }
+  .gal { display:grid; gap:22px }
+  .gal figure { margin:0; border:1px solid #30363d; border-radius:6px; overflow:hidden }
+  .gal figcaption { font:12px ui-monospace,monospace; color:#7d8590; padding:6px 10px;
+                    background:#161b22; border-top:1px solid #30363d }
+</style>
+<div class="bar">
+  <a href="#" onclick="document.body.classList.toggle('light');return false">toggle light/dark</a>
+  <a href="?view=readme">README</a>
+  <a href="?view=assets">assets</a>
+  <span id="status"></span>
+</div>
+<div class="wrap"><div id="md"></div></div>
+<script>
+const view = new URLSearchParams(location.search).get('view') || 'readme';
+
+// Minimal markdown pass. The README is deliberately almost all raw HTML, so
+// only the handful of constructs actually used need handling here.
+function md2html(src) {
+  // CommonMark HTML block type 2: a comment runs to its --> even across
+  // blank lines. Strip them first, exactly like GitHub does.
+  src = src.replace(/<!--[\s\S]*?-->/g, '');
+  const blocks = src.split(/\r?\n\s*\r?\n/);
+  return blocks.map(b => {
+    const t = b.trim();
+    if (!t) return '';
+    if (/^<(div|p|table|img|picture|details|h[1-6]|a|br|hr|sub|blockquote)/i.test(t)) return t;
+    if (/^<!--/.test(t)) return '';
+    if (/^#{1,6}\s/.test(t)) {
+      const n = t.match(/^#+/)[0].length;
+      return `<h${n}>${inline(t.replace(/^#+\s*/, ''))}</h${n}>`;
+    }
+    if (/^(-{3,}|\*{3,})$/.test(t)) return '<hr>';
+    if (/^```/.test(t)) return '<pre><code>' +
+      esc(t.replace(/^```\w*\n?/, '').replace(/```$/, '')) + '</code></pre>';
+    if (/^>\s/.test(t)) return '<blockquote>' +
+      inline(t.replace(/^>\s?/gm, '')) + '</blockquote>';
+    if (/^[-*]\s/m.test(t)) return '<ul>' + t.split('\n')
+      .map(l => '<li>' + inline(l.replace(/^[-*]\s*/, '')) + '</li>').join('') + '</ul>';
+    return '<p>' + inline(t) + '</p>';
+  }).join('\n');
+}
+const esc = s => s.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+function inline(s) {
+  return s.replace(/`([^`]+)`/g, (m, c) => '<code>' + esc(c) + '</code>')
+          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+          .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>')
+          .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img alt="$1" src="$2">')
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
+const ASSETS = ['hero.svg','divider.svg','sec-about.svg','sec-stack.svg',
+  'sec-projects.svg','sec-stats.svg','sec-contact.svg','desk-scene.svg',
+  'footer.svg','projects/_placeholder.svg'];
+
+if (view === 'assets') {
+  document.getElementById('md').innerHTML = '<div class="gal">' + ASSETS.map(a =>
+    `<figure><img src="assets/${a}?t=${Date.now()}" alt="${a}">
+     <figcaption>${a}</figcaption></figure>`).join('') + '</div>';
+  document.getElementById('status').textContent = '· asset gallery';
+} else {
+  fetch('README.md?t=' + Date.now()).then(r => r.ok ? r.text() : Promise.reject(r.status))
+    .then(t => { document.getElementById('md').innerHTML = md2html(t);
+                 document.getElementById('status').textContent = '· README.md'; })
+    .catch(e => { document.getElementById('md').innerHTML =
+      '<p>No README.md yet (' + e + '). <a href="?view=assets">View assets</a></p>'; });
+}
+</script>

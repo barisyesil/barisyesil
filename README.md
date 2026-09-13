@@ -243,17 +243,12 @@ models and products. My inbox is open.
 
 </div>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/barisyesil/barisyesil/output/snake.svg" width="100%" alt="Contribution snake eating the contribution graph">
+</div>
+
 <br>
 
 <div align="center">
   <img src="assets/footer.svg" width="100%" alt="Thanks for playing — insert coin to continue">
 </div>
-
-<!-- CONTRIBUTION SNAKE — enable after the first Actions run.
-     See GUIDE.md > "Turning on the contribution snake", then delete the
-     comment markers around the block below.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/barisyesil/barisyesil/output/snake.svg" alt="Contribution snake">
-</div>
--->

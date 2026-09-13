@@ -160,20 +160,17 @@ Trophy shelf:
 
 ---
 
-## Turning on the contribution snake
+## The contribution snake
 
 `.github/workflows/snake.yml` draws a snake eating your contribution graph and
-commits it to an `output` branch every night.
+commits it to the `output` branch every night at 03:00 UTC (and on every push
+to `main`). The README embeds it straight from that branch, so it is already
+on and needs no maintenance.
 
-1. Push this repo first (the workflow has to exist on GitHub).
-2. Go to **Settings > Actions > General > Workflow permissions** and choose
-   **Read and write permissions**. Save.
-3. Go to the **Actions** tab, pick *Generate contribution snake*, and hit
-   **Run workflow**. It takes about a minute.
-4. In `README.md`, find the `CONTRIBUTION SNAKE` comment at the very bottom and
-   delete the `<!--` and `-->` lines around the block.
-
-If step 3 fails with a permissions error, step 2 did not save.
+To refresh it by hand: **Actions** tab > *Generate contribution snake* >
+**Run workflow**. If a run ever fails with a permissions error, set
+**Settings > Actions > General > Workflow permissions** to
+**Read and write permissions**.
 
 ---
 

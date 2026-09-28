@@ -5,7 +5,7 @@
 <div align="center">
 
   <a href="https://www.linkedin.com/in/baris-yesildag/"><img src="https://img.shields.io/badge/LINKEDIN-1a0b2e?style=for-the-badge&logo=linkedin&logoColor=00e5ff&labelColor=0d0221" alt="LinkedIn"></a>
-  <a href="[https://barisyesildag.vercel.app/]"><img src="https://img.shields.io/badge/PORTFOLIO-1a0b2e?style=for-the-badge&logo=vercel&logoColor=ffcc00&labelColor=0d0221" alt="Portfolio"></a>
+  <a href="https://barisyesildag.vercel.app"><img src="https://img.shields.io/badge/PORTFOLIO-1a0b2e?style=for-the-badge&logo=vercel&logoColor=ffcc00&labelColor=0d0221" alt="Portfolio"></a>
   <a href="https://www.kaggle.com/baryeilda"><img src="https://img.shields.io/badge/KAGGLE-1a0b2e?style=for-the-badge&logo=kaggle&logoColor=00e5ff&labelColor=0d0221" alt="Kaggle"></a>
   <a href="mailto:barisyesil621@gmail.com"><img src="https://img.shields.io/badge/EMAIL-1a0b2e?style=for-the-badge&logo=gmail&logoColor=ff2e97&labelColor=0d0221" alt="Email"></a>
   <br><br>
